@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:48:19 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/09 11:42:23 by erico-ke         ###   ########.fr       */
+/*   Updated: 2025/01/09 17:13:41 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include <limits.h>
+
+//libft
 
 typedef struct s_list
 {
@@ -65,5 +71,27 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//printf
+
+int	ft_printf(char const *v_inputs, ...);
+int	ft_putchar_p_fd(char c, int fd);
+int	ft_putstr_p_fd(char *s, int fd);
+int	ft_putnbr_p_fd(int n, int fd);
+int	ft_putnbrfforuinput_fd(unsigned int n, int fd);
+int	ft_hexaprint(unsigned long long nbr, char c);
+int	ft_voidptrwrite(unsigned long long input);
+
+//get_next_line
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+char	*get_next_line(int fd);
+char	*ft_strchr_g(char *s, int c);
+void	*ft_calloc_g(size_t nmemb, size_t size);
+char	*ft_strjoin_g(char *s1, char *s2);
+size_t	ft_strlen_g(char *s);
 
 #endif
