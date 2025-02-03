@@ -13,7 +13,7 @@ Libft es el primer proyecto de la carrera de 42. Este proyecto consiste en recre
 Clona este repositorio en tu directorio local:
 
 ```bash
-$ git clone https://github.com/erico-ke/libft.git
+$ git clone https://github.com/erico-ke/libft-42MalagaProyect.git
 $ cd libft
 ```
 
